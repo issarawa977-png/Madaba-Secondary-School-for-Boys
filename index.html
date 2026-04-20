@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
@@ -298,16 +298,8 @@
           textColor: '#004d40',
           teachers: [
             { id: '26', name: 'أحمد منصور عايش السليمات', subject: 'تاريخ الأردن + الجغرافيا', emoji: '🗺️' },
+            { id: '30', name: 'سلطان فايز عويد الفايز', subject: 'تاريخ الأردن والتاريخ', emoji: '🏛️' },
             { id: '27', name: 'منتصر سليمان محمد الزواهرة', subject: 'تربية رياضية', emoji: '⚽' }
-          ]
-        },
-        {
-          name: 'المعلمون الإضافيون',
-          color: '#d1c4e9',
-          textColor: '#311b92',
-          teachers: [
-            { id: '28', name: 'زيد القبيلات', subject: 'التربية الإسلامية', emoji: '🕌' },
-            { id: '29', name: 'ليث أبونصير', subject: 'تاريخ الاردن + تاريخ العرب', emoji: '🏛️' }
           ]
         }
       ]
@@ -339,9 +331,8 @@
       { id: '24', sortId: 24, name: 'عيسى خلف جمعة الرواحنة', jobTitle: 'معلم', category: Category.TEACHER, ministryNumber: '', subject: 'المهارات الرقمية + الثقافة المالية' },
       { id: '25', sortId: 25, name: 'يحيى سليمان محمد القيسي', jobTitle: 'معلم', category: Category.TEACHER, ministryNumber: '', subject: 'الثقافة المالية' },
       { id: '26', sortId: 26, name: 'أحمد منصور عايش السليمات', jobTitle: 'معلم', category: Category.TEACHER, ministryNumber: '', subject: 'تاريخ الأردن + الجغرافيا' },
-      { id: '27', sortId: 27, name: 'منتصر سليمان محمد الزواهرة', jobTitle: 'معلم', category: Category.TEACHER, ministryNumber: '', subject: 'تربية رياضية' },
-      { id: '28', sortId: 28, name: 'زيد القبيلات', jobTitle: 'معلم إضافي', category: Category.TEACHER, ministryNumber: '', subject: 'التربية الإسلامية' },
-      { id: '29', sortId: 29, name: 'ليث أبونصير', jobTitle: 'معلم إضافي', category: Category.TEACHER, ministryNumber: '', subject: 'تاريخ الاردن + تاريخ العرب' }
+      { id: '30', sortId: 27, name: 'سلطان فايز عويد الفايز', jobTitle: 'معلم', category: Category.TEACHER, ministryNumber: '', subject: 'تاريخ الأردن والتاريخ' },
+      { id: '27', sortId: 28, name: 'منتصر سليمان محمد الزواهرة', jobTitle: 'معلم', category: Category.TEACHER, ministryNumber: '', subject: 'تربية رياضية' }
     ];
 
     const INITIAL_CLASSES = [{
@@ -1822,7 +1813,7 @@
           value: password,
           onChange: (e) => setPassword(e.target.value),
           placeholder: "\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631",
-          className: "w-full px-4 py-3 rounded-xl border-2 border-gray-100 focus:border-indigo-500 focus:outline-none transition text-center text-lg tracking-widest",
+          className: "w-full px-4 py-3 rounded-xl border-2 border-gray-100 focus:border-indigo-500 focus:outline-none transition text-center text-lg tracking-widest text-gray-900",
           autoFocus: true
         }), error && /*#__PURE__*/React.createElement("p", {
           className: "text-red-500 text-xs mt-2 font-bold text-center"
@@ -1899,7 +1890,7 @@
           type: "number",
           value: cls.students.length,
           onChange: (e) => updateStudentCount(cls.id, e.target.value),
-          className: "w-20 px-2 py-1 border rounded font-bold text-center focus:ring-2 focus:ring-indigo-500 outline-none"
+          className: "w-20 px-2 py-1 border rounded font-bold text-center focus:ring-2 focus:ring-indigo-500 outline-none text-gray-900"
         })))));
       };
 
@@ -1946,11 +1937,11 @@
           className: "grid grid-cols-2 gap-4"
         }, /*#__PURE__*/React.createElement("input", {
           placeholder: "\u0627\u0633\u0645 \u0627\u0644\u0645\u0639\u0644\u0645",
-          className: "p-2 rounded border",
+          className: "p-2 rounded border text-black",
           value: newTeacher.name,
           onChange: e => setNewTeacher({ ...newTeacher, name: e.target.value })
         }), /*#__PURE__*/React.createElement("select", {
-          className: "p-2 rounded border",
+          className: "p-2 rounded border text-black",
           value: newTeacher.deptIdx,
           onChange: e => setNewTeacher({ ...newTeacher, deptIdx: parseInt(e.target.value) })
         }, localStaff.departments.map((d, i) => /*#__PURE__*/React.createElement("option", {
@@ -2073,11 +2064,11 @@
           className: "grid grid-cols-1 md:grid-cols-2 gap-4"
         }, /*#__PURE__*/React.createElement("input", {
           placeholder: "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0635\u0648\u0631\u0629",
-          className: "p-2 rounded border focus:ring-2 focus:ring-indigo-500 outline-none",
+          className: "p-2 rounded border focus:ring-2 focus:ring-indigo-500 outline-none text-black",
           value: newTitle,
           onChange: e => setNewTitle(e.target.value)
         }), /*#__PURE__*/React.createElement("select", {
-          className: "p-2 rounded border focus:ring-2 focus:ring-indigo-500 outline-none",
+          className: "p-2 rounded border focus:ring-2 focus:ring-indigo-500 outline-none text-black",
           value: newCategory,
           onChange: e => setNewCategory(e.target.value)
         }, categories.map(c => /*#__PURE__*/React.createElement("option", {
