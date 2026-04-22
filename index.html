@@ -213,7 +213,7 @@
     // ==========================================
     import React, { useState, useEffect, useRef, useMemo } from 'react';
     import { createRoot } from 'react-dom/client';
-    import { School, Users, GraduationCap, Image as ImageIcon, Star, Compass, Check, ArrowDown, Sparkles, MapPin, Phone, Award, BookOpen, Target, Clock, ExternalLink, Layers, Briefcase, PenTool, Plus, Search, Edit2, Trash2, FileText, Calendar, BarChart as BarChartIcon, UserCog, UploadCloud, Tag, Filter, X, FileType, Eye, Heart, Flag, Rocket, CheckCircle2, TrendingUp, ShieldCheck, LogOut, Bell, Megaphone, AlertCircle, Info } from 'lucide-react';
+    import { School, Users, GraduationCap, Image as ImageIcon, Star, Compass, Check, ArrowDown, Sparkles, MapPin, Phone, Award, BookOpen, Target, Clock, ExternalLink, Layers, Briefcase, PenTool, Plus, Search, Edit2, Trash2, FileText, Calendar, BarChart as BarChartIcon, UserCog, UploadCloud, Tag, Filter, X, FileType, Eye, Heart, Flag, Rocket, CheckCircle2, TrendingUp, ShieldCheck, LogOut, Bell, Megaphone, AlertCircle, Info, Facebook } from 'lucide-react';
     import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, PieChart, Pie, Legend } from 'recharts';
     import * as XLSX from 'xlsx';
     const Category = {
@@ -2440,8 +2440,18 @@
       }, p.label))))), /*#__PURE__*/React.createElement("main", {
         className: "container mx-auto px-4 py-8 flex-grow"
       }, activePage === 'school' && /*#__PURE__*/React.createElement(SchoolInfoPage, null), activePage === 'announcements' && /*#__PURE__*/React.createElement(AnnouncementsPage, null), activePage === 'staff' && /*#__PURE__*/React.createElement(StaffPage, null), activePage === 'students' && /*#__PURE__*/React.createElement(StudentsPage, null), activePage === 'photos' && /*#__PURE__*/React.createElement(PhotosPage, null), activePage === 'roadmap' && /*#__PURE__*/React.createElement(RoadmapPage, null), activePage === 'assessment' && /*#__PURE__*/React.createElement(AssessmentPage, null), activePage === 'admin' && /*#__PURE__*/React.createElement(AdminPanel, null)), /*#__PURE__*/React.createElement("footer", {
-        className: "bg-white border-t p-6 text-center text-gray-400 text-sm"
-      }, "\xA9 2025 - 2026 \u0645\u062F\u0631\u0633\u0629 \u0645\u0627\u062F\u0628\u0627 \u0627\u0644\u062B\u0627\u0646\u0648\u064A\u0629 \u0644\u0644\u0628\u0646\u064A\u0646 - \u062A\u0637\u0648\u064A\u0631 \u0627\u0644\u0645\u0639\u0644\u0645 \u0639\u064A\u0633\u0649 \u0627\u0644\u0631\u0648\u0627\u062D\u0646\u0629")));
+        className: "bg-white border-t p-6 flex flex-col items-center gap-3 text-gray-400 text-sm"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex gap-4"
+      }, /*#__PURE__*/React.createElement("a", {
+        href: "https://www.facebook.com/share/14b2HjxoJdt/",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        className: "p-2 bg-blue-50 text-blue-600 rounded-full hover:bg-blue-100 hover:scale-110 transition-all",
+        "aria-label": "\u0635\u0641\u062D\u0629 \u0627\u0644\u0645\u062F\u0631\u0633\u0629 \u0639\u0644\u0649 \u0641\u064A\u0633\u0628\u0648\u0643"
+      }, /*#__PURE__*/React.createElement(Facebook, {
+        size: 20
+      })))), /*#__PURE__*/React.createElement("div", null, "\xA9 2025 - 2026 \u0645\u062F\u0631\u0633\u0629 \u0645\u0627\u062F\u0628\u0627 \u0627\u0644\u062B\u0627\u0646\u0648\u064A\u0629 \u0644\u0644\u0628\u0646\u064A\u0646 - \u062A\u0637\u0648\u064A\u0631 \u0627\u0644\u0645\u0639\u0644\u0645 \u0639\u064A\u0633\u0649 \u0627\u0644\u0631\u0648\u0627\u062D\u0646\u0629")));
     };
     const container = document.getElementById('root');
     if (container) {
@@ -2449,6 +2459,19 @@
       root.render(/*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(App, null)));
     }
   </script>
+
+  <!--footer: Facebook link at bottom of home page--> 
+  <footer id="school-footer" class="w-full fixed bottom-0 left-0 bg-white border-t border-gray-200 shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-start md:justify-end gap-4">
+      <a href="https://www.facebook.com/share/14b2HjxoJdt/" target="_blank" rel="noopener" aria-label="صفحة المدرسة على فيسبوك" class="flex items-center text-blue-600 hover:text-blue-800 font-semibold">
+        <!-- Facebook Icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="mr-2">
+          <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.1 5.66 21.22 10.44 22v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.86h2.78l-.45 2.9h-2.33V22c4.78-.78 8.44-4.9 8.44-9.93z"/>
+        </svg>
+        فيسبوك
+      </a>
+    </div>
+  </footer>
 </body>
 
 </html>
